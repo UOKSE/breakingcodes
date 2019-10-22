@@ -1,0 +1,56 @@
+body {
+    background: #000;
+}
+
+#text {
+    color: #5dea62;
+    font-family: Monaco, monospace;
+    font-size: 24px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: 1s infinite normal glitch;
+    transform: translate(-50%, -50%);
+}
+
+span {
+    animation: 1.5s infinite normal caret;
+}
+
+::-moz-selection {
+    background: #7021d2;
+    color: #fff;
+}
+
+::selection {
+    background: #7021d2;
+    color: #fff;
+}
+
+@keyframes glitch {
+    0% {
+        opacity: 0;
+        transform: translate(-52%, -52%);
+    }
+
+    40%,
+    80% {
+        opacity: 1;
+        transform: translate(-51%, -51%);
+    }
+}
+
+@keyframes caret {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+}
